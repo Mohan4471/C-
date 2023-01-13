@@ -1,0 +1,25 @@
+Write a C++ Program to Print Numbers from 1 to n using class.
+
+#include <iostream>
+using namespace std;
+
+class PrintNumbers {
+    private:
+        int n;
+    public:
+        PrintNumbers(int num) {n = num;}
+        void printNums() {
+            for (int i = 1; i <= n; i++) {
+                cout << i << " ";
+            }
+        }
+};
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    PrintNumbers p(num);
+    p.printNums();
+    return 0;
+}
