@@ -1,0 +1,33 @@
+Write a C++ program to Swap two numbers using class
+
+#include <iostream>
+using namespace std;
+
+class Swap {
+    private:
+        int a, b;
+    public:
+        Swap(int x, int y) {a = x; b = y;}
+        void swapNums() {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+        void display() {
+            cout << "a: " << a << endl;
+            cout << "b: " << b << endl;
+        }
+};
+
+int main() {
+    int x, y;
+    cout << "Enter two numbers: ";
+    cin >> x >> y;
+    Swap s(x, y);
+    cout << "Before swapping: " << endl;
+    s.display();
+    s.swapNums();
+    cout << "After swapping: " << endl;
+    s.display();
+    return 0;
+}
