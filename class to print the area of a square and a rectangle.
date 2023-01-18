@@ -1,0 +1,21 @@
+ Create a class to print the area of a square and a rectangle. The class has two functions with the same name but different number of parameters. The function for printing the area of rectangle has two parameters which are its length and breadth respectively while the other function for printing the area of square has one parameter which is the side of the square.
+
+ #include <iostream>
+
+class Shape {
+ public:
+  void area(int side) {
+    std::cout << "Area of square: " << side * side << std::endl;
+  }
+
+  void area(int length, int breadth) {
+    std::cout << "Area of rectangle: " << length * breadth << std::endl;
+  }
+};
+
+int main() {
+  Shape shape;
+  shape.area(5); // square with side 5
+  shape.area(5, 10); // rectangle with length 5 and breadth 10
+  return 0;
+}
